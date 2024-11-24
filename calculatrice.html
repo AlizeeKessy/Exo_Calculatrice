@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="style/calculatrice.css">
+</head>
+<body>
+    <form class="calculatrice" name="calc">
+        <input aria-label="search" type="text" class="display" name="display" readonly value="0">
+        <!--L'attribut "readonly" sert à empêcher l'utilisateur à saisir le texte
+        directement dans la zone écran (input) car il faudra pluôt qu'il tape sur les touches
+        pour pouvoir rentrer son calcul-->
+
+        <span class="num clear" onclick="resetValue();">C</span>
+        <!-- "resetValue" fonction pour réinitialiser notre calculatrice-->
+        
+        <span class="num operation" onclick="addValue('/');">÷</span>
+        <!-- "addValue" fonction pour ajouter l'opétateur division de notre calculatrice-->
+        
+        <span class="num" onclick="addValue('7')">7</span>
+        <span class="num" onclick="addValue('8')">8</span>
+        <span class="num" onclick="addValue('9')">9</span>
+        <!-- "addValue" fonction pour ajouter les touches 7, 8, 9 de notre calculatrice-->
+        
+        <span class="num operation" onclick="addValue('*');">x</span>
+        <!-- "addValue" fonction pour ajouter l'opétateur division de notre calculatrice-->
+        
+        <span class="num" onclick="addValue('4')">4</span>
+        <span class="num" onclick="addValue('5')">5</span>
+        <span class="num" onclick="addValue('6')">6</span>
+        <!-- "addValue" fonction pour ajouter les touches 4, 5, 6 de notre calculatrice-->
+
+        <span class="num operation" onclick="addValue('-');">-</span>
+        <!-- "addValue" fonction pour ajouter l'opétateur soustraction de notre calculatrice-->
+        
+        <span class="num" onclick="addValue('1')">1</span>
+        <span class="num" onclick="addValue('2')">2</span>
+        <span class="num" onclick="addValue('3')">3</span>
+        <!-- "addValue" fonction pour ajouter les touches 1, 2, 3 de notre calculatrice-->
+        
+        <span class="num operation" onclick="addValue('+');">+</span>
+        <!-- "addValue" fonction pour ajouter l'opétateur addition de notre calculatrice-->
+
+        <span class="num zero" onclick="addValue('0')">0</span>
+        <!-- "addValue" fonction pour ajouter la touche 0 de notre calculatrice-->
+
+        <span class="num" onclick="addValue('.')">.</span>
+        <!-- "addValue" fonction pour ajouter la touche . de notre calculatrice-->
+
+        <span class="num equal" onclick="calculate('=')">=</span>
+        <!-- "calculate" fonction pour ajouter la touche . de notre calculatrice-->
+    </form>
+    
+
+    <script src="script/calculatrice.js"></script>
+</body>
+</html>
